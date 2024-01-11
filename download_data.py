@@ -14,5 +14,5 @@ test_url=f'https://api.zindi.africa/v1/competitions/zindiweekendz-learning-urban
 train_data=pd.read_csv(train_url)
 test_data=pd.read_csv(test_url)
 
-train_data.to_csv('data/Train.csv')
-test_data.to_csv('data/Test.csv')
+train_data.to_csv('data/Train.csv', index = False)
+test_data.to_csv('data/Test.csv', index = False)
