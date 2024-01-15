@@ -1,5 +1,4 @@
 import joblib
-#import dill
 import pandas as pd
 import numpy as np
 import sys
@@ -16,17 +15,14 @@ Read a joblib 'model' and csv 'data', outputing .predict(data) as 'target'
 """)
 parser.add_argument("model", nargs='?', default="models/model.joblib")
 parser.add_argument("data", nargs='?', default="data/test.csv")
-#parser.add_argument("--score", nargs='?', default="score.csv")
 parser.add_argument("--target", nargs='?', default="target.csv")
 args=parser.parse_args()
 
 model_path = args.model
 data_path = args.data
-#score_path= args.score
 target_path= args.target
 
 model = joblib.load(model_path)
-#model = dill.load(open("models/ols.dill", "rb"))
 features = model.feature_names_in_
 data = pd.read_csv(data_path)[features]
 pred = model.predict(data)
