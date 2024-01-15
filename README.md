@@ -1,21 +1,21 @@
 # Urban Air Pollution
 
-Zindi Challenge regarding Air Pollution in African cities by using RMSE as evaluation model.
+Zindi Challenge regarding [Air Pollution](https://zindi.africa/competitions/urban-air-pollution-challenge) in African cities by using RMSE as evaluation metric.
 
 ## Description
 
- Using collected weather data and daily observations from the Sentinel 5P satellite tracking various pollutants in the atmosphere to predict PM2.5 particulate matter concentration (a common measure of air quality that normally requires ground-based sensors to measure) every day for each city. The data covers the last three months, spanning hundreds of cities across the globe.
+ Using collected weather data and daily observations from the Sentinel 5P satellite tracking various pollutants in the atmosphere to predict PM2.5 particulate matter concentration (a common measure of air quality that normally requires ground-based sensors to measure) every day for each city. The data covers January to March of 2020, spanning hundreds of cities across the globe.
 
 ## Data
 
 Main sources of the data:
 - **Ground-based air quality sensors** : Target (daily mean PM2.5 Concentration), minimum and maximum readings on that day, the variance of the readings and the total number (count) of sensor readings used to compute the target value. This data is only provided for the train set - **we must predict the target variable for the test set.**
 - **The Global Forecast System (GFS)** : Humidity, temperature and wind speed.
-- **The Sentinel 5P satellite** : Monitors various pollutants in the atmosphere.(read more about the individual products here: https://developers.google.com/earth-engine/datasets/catalog/sentinel-5p)
+- **The Sentinel 5P satellite** : Monitors various pollutants in the atmosphere.(read more about the individual products [here](https://developers.google.com/earth-engine/datasets/catalog/sentinel-5p)
 
 
 Download data for this project: 
-1. Train.csv, Test.csv, SampleSubmission.csv (https://zindi.africa/competitions/zindiweekendz-learning-urban-air-pollution-challenge/data)
+1. Train.csv, Test.csv, SampleSubmission.csv [from](https://zindi.africa/competitions/zindiweekendz-learning-urban-air-pollution-challenge/data)
 
 2. Run `download_data.py` in terminal.
  - Windows:
@@ -26,6 +26,8 @@ Download data for this project:
     ```sh
     python ./download_data.py
     ```
+
+Note that your auth_token from your Zindi competition page must be placed in the .env file for download_data.py to work.
 
 ## Set up the Environment
 
