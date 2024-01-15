@@ -91,3 +91,8 @@ In order to test that predict works on a test set you created run:
 ```bash
 python ./predict.py models/gs_final.joblib data/Test.csv
 ```
+
+## Presentation 
+
+Feel free to check on our presentation for Stakeholder : 
+https://prezi.com/view/DVSQefHYd564gALRreMF/
